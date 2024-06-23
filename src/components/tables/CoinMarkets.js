@@ -55,6 +55,8 @@ const CoinMarkets = () => {
 
   useEffect(() => {
     fetchCoinMarkets();
+    const interval = setInterval(fetchCoinMarkets, 60000);
+    return () => clearInterval(interval);
   }, []);
 
   return (

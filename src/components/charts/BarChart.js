@@ -48,6 +48,8 @@ const BarChart = () => {
 
   useEffect(() => {
     fetchTopCoins();
+    const interval = setInterval(fetchTopCoins, 60000);
+    return () => clearInterval(interval);
   }, []);
 
   const data = {

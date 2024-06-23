@@ -29,6 +29,8 @@ const Exchanges = () => {
 
   useEffect(() => {
     fetchExchanges();
+    const interval = setInterval(fetchCategories, 60000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
