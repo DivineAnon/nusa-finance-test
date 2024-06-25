@@ -29,7 +29,7 @@ const MarketIndexes = () => {
 
   useEffect(() => {
     fetchIndexes();
-    const interval = setInterval(fetchCategories, 60000);
+    const interval = setInterval(fetchIndexes, 60000);
     return () => clearInterval(interval);
   }, []);
 

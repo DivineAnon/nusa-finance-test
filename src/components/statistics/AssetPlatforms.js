@@ -29,7 +29,7 @@ const AssetPlatforms = () => {
 
   useEffect(() => {
     fetchAssetPlatforms();
-    const interval = setInterval(fetchCategories, 60000);
+    const interval = setInterval(fetchAssetPlatforms, 60000);
     return () => clearInterval(interval);
   }, []);
 
